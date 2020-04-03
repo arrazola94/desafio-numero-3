@@ -1,0 +1,67 @@
+<html>
+    <head>
+        <meta chatser="utf-8">
+        <title>repetidor de form</title>
+        <link rel="stylesheet" href="../css/bootstrap-4.3.1-dist/css/bootstrap.min.css">
+        <script type="text javascript" src="../js/jquery-3.4.1.js"></script>
+        
+    <script type="text/javascript">
+
+            $(document).ready(function(){
+                var cont=0;
+                $(document).on("click","#btnPro",function(){
+                    cont = cont+1;
+
+                    var formulario = "<div class='col-md.4' style='margin:20px 20px;'><label>Texto "+cont+"</label><br><br>"+
+                    "<input type='text' class='form-control texto' placeholder='ingrese su nombre'><br><br>"+
+                    "<input type='text' class='form-control texto' placeholder='ingrese su apellido'><br><br>"+
+                    "<input type='number' class='form-control texto' placeholder='ingrese su edad'><br><br>"+
+                    "<select class='col-md-3 form-control'>"+
+                        "<option value='1'>EL  SALVADOR</option>"+
+                        "<option value='2'>GUATEMALA</option>"+
+                        "<option value='3'>HONDURAS</option>"+
+                        "<option value='4'>COSTA RICA</option>"+
+                        "<option value='5'>PANAMA</option>"+
+                    "</select><br><br><br>"+
+                    "<label class='btn btn-success active'>"+
+                        "<input type='checkbox' autocomplete='off' checked>"+
+                        "<span class='glyphicon glyphicon-ok'></span>leer libros"+
+                    "</label>"+
+                    "<label class='btn btn-warning active'>"+
+                        "<input type='checkbox' autocomplete='off' checked>"+
+                        "<span class='glyphicon glyphicon-ok'></span>jugar futbol"+
+                    "</label>"+
+                    "<label class='btn btn-primary active'>"+
+                        "<input type='checkbox' autocomplete='off' checked>"+
+                        "<span class='glyphicon glyphicon-ok'></span>natacion"+
+                    "</label><br><br><br>"+
+                    "<textarea class='col-md-8 form-control' placeholder='ingrese su direccion de residencia'></textaarea>"+
+                        "<select class='col-md-3 form-control'>"+
+                        "<option value='6'>DESARROLLADOR</option>"+
+                        "<option value='7'>ANALISTA</option>"+
+                        "<option value='8'>DISEÑADOR</option>"+
+                        "<option value='9'>PROGRAMADOR</option>"+
+                        "<option value='10'>GERENTE</option>"+
+                    "</select></div>";   
+                    $("#resultado").append(formulario);  
+                });
+            });
+        </script>
+    </head>
+    <body>
+        <br>
+        <label><B><h2>formulario de ingreso</h2></B></label>
+        <hr>
+        <form>
+            <input type="number" placeholder="ingrese el numero de empleados" id="txt1" name="text" class="col-md-3 form-control">
+            <input type="button" value="procesar" name="process" id="btnPro" class="btn btn-success"><br><br>
+
+            <div id="resultado">
+
+
+            </div>
+        </form>
+            
+    </body>
+
+</html>
